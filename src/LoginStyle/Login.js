@@ -2,6 +2,7 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
 import fire from './Firebase';
+import Header from '../NavBar/Header';
 
 class Login extends React.Component {
   state = {
@@ -16,6 +17,7 @@ class Login extends React.Component {
 
   login = (e) => {
     e.preventDefault();
+    console.log(e.name);
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     })
       .catch((err) => {
@@ -33,8 +35,13 @@ class Login extends React.Component {
       }
       )
   }
+  
+  log = () =>{
+   console.log("sanju bhai"); 
+  }
 
- LogInForm = () => {
+
+  LogInForm(){
     return (
       <div>
 
@@ -129,6 +136,7 @@ class Login extends React.Component {
 
     return (
       <div>
+        {/* <Header log={this.LogInForm()} /> */}
         <div className="signupSection">
           <div className="info">
             <h2 style={{ fontSize: "25px" }}>Mission to Safe Park</h2>
@@ -137,16 +145,7 @@ class Login extends React.Component {
             <p>The Parking Is Here</p>
           </div>
           <form className="signupForm" name="signupform">
-            <h4>Existing User ?</h4>
-            {/* <h5><input onClick={this.SignUpForm} type="button" name="yes" defaultValue="yes" defaultChecked />yes<input onClick={this.logInForm} type="button" name='no' defaultValue='no' />no</h5> */}
-            <button onClick={this.SignUpForm} >No</button>
-            <button onClick={this.LogInForm} >Yes</button>
-
-            <h5></h5>
-
-            <div>
-              {/* error: {this.state.errorMessage} */}
-            </div>
+          {this.LogInForm}
           </form>
         </div>
 

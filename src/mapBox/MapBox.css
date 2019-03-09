@@ -1,3 +1,42 @@
 .height{
     height: '200px',
 }
+
+.exstUserbutton{
+        background-color: #90CAF9; /* Green */
+        border: 0.7px solid black;
+        color: black;
+        padding: 10px 28px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 4px;
+}
+
+@media only screen and (max-width: 962px) {
+    .logoSize {
+      height: 70px;
+      width: 65px;
+    }
+  }
+
+    .navBaresh{
+        min-height: 50px;
+    }
+
+    .mapchyakhalchmargin{
+        margin-top: 280px;
+    }
+
+    @media only screen and (min-width: 1080px) {
+        .navBinkami{
+            min-height: 50px;
+            border-bottom: 1px solid #3D3E3D;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(61, 62, 61);
+            z-index: 9999;
+        }
+    }  
+

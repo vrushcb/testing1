@@ -18,6 +18,8 @@ import LoginApp from './LoginStyle/App';
 
 class Temp extends React.Component {
 
+   
+
     renderHelper(){
         return (
             <div>
@@ -96,16 +98,9 @@ class Temp extends React.Component {
                 </section>
                 {/* <!--end of slider section--> */}
 
-                <section id="map">
-                    <div className="height">
-                            <div>
-                                <App />
-                            </div>
-                     </div>
-                </section>
-
                 {/* <!--Start of welcome section--> */}
-                <section id="welcome" style={{ marginTop: '300px'}}>
+                <section id="welcome" style={{ marginTop: '100px'}}>
+                <br /><br /><br /><br /><br />
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
@@ -148,7 +143,7 @@ class Temp extends React.Component {
                             {/* <!--End of col-md-3--> */}
                             <div className="col-md-3">
                                 <div className="item">
-                                    <a href="Search/map">
+                                    <a href="#map">
                                     <div className="single_item">
                                         <div className="item_list">
                                             <div className="welcome_icon">
@@ -183,11 +178,17 @@ class Temp extends React.Component {
                 </section>
                 {/* <!--end of welcome section--> */}
 
-
+                <section id="map" style={{ height:'500px'}}>
+                    <div >
+                            <div>
+                                <App />
+                            </div>
+                     </div>
+                </section>
 
                 {/* <!--Start of volunteer--> */}
-                <section id="volunteer">
-                    <div className="container">
+                <section id="volunteer" className="mapchyakhalchmargin" style={{ marginTop: '300px'}}> 
+                    <div className="container mapchyakhalchmargin">
                         <div className="row vol_area">
                             <div className="col-md-8">
                                 <div className="volunteer_content">

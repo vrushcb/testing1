@@ -15,7 +15,6 @@ class Test extends React.Component{
                     <Header />
                     <Temp maps={this.chu}/>
                     <Route path='#map' exact component={App} />
-                    <App />
                 </div>
             </BrowserRouter>
         );
