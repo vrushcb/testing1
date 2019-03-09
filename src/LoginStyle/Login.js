@@ -19,8 +19,8 @@ class Login extends React.Component {
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     })
       .catch((err) => {
-       this.setState = ({ errorMessage : err.message });
-       console.log(err.message);
+        // this.setState = ({ errorMessage: err.message });
+        alert(err.message);
       });
   }
 
@@ -28,69 +28,132 @@ class Login extends React.Component {
     e.preventDefault();
     fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
     }).then((u) => { console.log(u) })
-      .catch((error) => {
-        this.setState = ({ errorMessage : error.message });
-      })
+      .catch(error => {
+        alert(error.message);
+      }
+      )
   }
+
+ LogInForm = () => {
+    return (
+      <div>
+
+        <h2 style={{ fontSize: "25px" }}>Login</h2>
+        <ul className="noBullet">
+          <li>
+            {/* <label for="email"></label> */}
+            <input
+              value={this.state.email}
+              onChange={this.handleChange}
+              type="email"
+              name="email"
+              className="inputFields"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+              //id="email"
+              required
+            />
+          </li>
+          <li>
+            {/* <label for="password"></label> */}
+            <input
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+              name="password"
+              className="inputFields"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              //id="password"
+              //onInput="return passwordValidation(this.value)"
+              required
+            />
+          </li><br />
+
+          <li id="center-btn">
+            <button className="button" type="submit" onClick={this.login}>Login</button>
+          </li>
+        </ul>
+      </div>
+    );
+  };
+
+  SignUpForm = () => {
+    return (
+      <div>
+
+        <h2 style={{ fontSize: "25px" }}>Sign Up</h2>
+        <ul className="noBullet">
+          <li>
+            {/* <label for="email"></label> */}
+            <input
+              value={this.state.email}
+              onChange={this.handleChange}
+              type="email"
+              name="email"
+              className="inputFields"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+              //id="email"
+              required
+            />
+          </li>
+          <li>
+            {/* <label for="password"></label> */}
+            <input
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+              name="password"
+              className="inputFields"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              //id="password"
+              //onInput="return passwordValidation(this.value)"
+              required
+            />
+          </li><br />
+
+          <li id="center-btn">
+            <button className="button" onClick={this.signup} style={{ marginLeft: '25px' }}>Signup</button>
+          </li>
+        </ul>
+      </div>
+    );
+  };
+
+
   render() {
+
     return (
       <div>
         <div className="signupSection">
           <div className="info">
-            <h2 style={{ fontSize: "25px"}}>Mission to Safe Park</h2>
+            <h2 style={{ fontSize: "25px" }}>Mission to Safe Park</h2>
             {/* <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i> */}
-            <img src="https://www.iconspng.com/uploads/green-parking/green-parking.png" alt="parking_icon" width="200px" height="200px"/>
+            <img src="https://www.iconspng.com/uploads/green-parking/green-parking.png" alt="parking_icon" width="200px" height="200px" />
             <p>The Parking Is Here</p>
           </div>
           <form className="signupForm" name="signupform">
-            <h2 style={{ fontSize: "25px"}}>Sign Up</h2>
-            <ul className="noBullet">
-              <li>
-                {/* <label for="email"></label> */}
-                <input
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  type="email"
-                  name="email"
-                  className="inputFields"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Email"
-                  //id="email"
-                  required
-                />
-              </li>
-              <li>
-                {/* <label for="password"></label> */}
-                <input
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  type="password"
-                  name="password"
-                  className="inputFields"
-                  id="exampleInputPassword1"
-                  placeholder="Password"
-                  //id="password"
-                  //onInput="return passwordValidation(this.value)"
-                  required
-                />
-              </li><br />
-              
-              <li id="center-btn">
-                <button className="button" type="submit" onClick={this.login}>Login</button>
-                <button className="button" onClick={this.signup} style={{ marginLeft: '25px' }}>Signup</button>
-              </li>
-            </ul>
+            <h4>Existing User ?</h4>
+            {/* <h5><input onClick={this.SignUpForm} type="button" name="yes" defaultValue="yes" defaultChecked />yes<input onClick={this.logInForm} type="button" name='no' defaultValue='no' />no</h5> */}
+            <button onClick={this.SignUpForm} >No</button>
+            <button onClick={this.LogInForm} >Yes</button>
+
+            <h5></h5>
+
             <div>
-              error: {this.state.errorMessage}
+              {/* error: {this.state.errorMessage} */}
             </div>
           </form>
         </div>
 
-          <script src="js/index.js"></script>
-        </div>
+        <script src="js/index.js"></script>
+      </div>
 
-        );
-      }
-    }
+    );
+  }
+}
 export default Login;

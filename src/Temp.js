@@ -17,15 +17,15 @@ import LoginApp from './LoginStyle/App';
 
 
 class Temp extends React.Component {
-    mapIng = () =>{
-        return <div><App /></div>;
-    }
-    renderHelper() {
+
+    renderHelper(){
         return (
             <div>
                 <BrowserRouter>
                 <div>
                     <Header />
+                    <Route path='#map' exact component={App} />
+
                 {/* <!--Start of slider section--> */}
                 <section id="slider">
                     <div id="carousel-example-generic" className="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
@@ -50,8 +50,8 @@ class Temp extends React.Component {
                                             
                                             
                                                 <div>
-                                                <Link to="/Search/map"><button className="button">Search for places</button></Link>
-
+                                                <a href="#map"><button className="button">Search for places</button></a><br /><br /><br/>
+                                        
                                                 <div>
                                                     <Route path="/Search/map" exact component={App} />
                                                     <Route path="/login" exact component={LoginApp} />
@@ -96,8 +96,16 @@ class Temp extends React.Component {
                 </section>
                 {/* <!--end of slider section--> */}
 
+                <section id="map">
+                    <div className="height">
+                            <div>
+                                <App />
+                            </div>
+                     </div>
+                </section>
+
                 {/* <!--Start of welcome section--> */}
-                <section id="welcome">
+                <section id="welcome" style={{ marginTop: '300px'}}>
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
@@ -190,7 +198,7 @@ class Temp extends React.Component {
                             {/* <!--End of col-md-8--> */}
                             <div className="col-md-3 col-md-offset-1">
                                 <div className="join_us">
-                                    <a href="" className="vol_cust_btn">join us</a>
+                                    <a href="/login" className="vol_cust_btn">join us</a>
                                 </div>
                             </div>
                             {/* <!--End of col-md-3--> */}
