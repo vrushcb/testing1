@@ -37,16 +37,10 @@ class Login extends React.Component {
       )
   }
 
-  log = () => {
-    console.log("sanju bhai");
-  }
 
-
-  LogInForm() {
+  loginForm() {
     return (
       <div>
-
-
         <h2 style={{ fontSize: "25px" }}>Login</h2>
         <ul className="noBullet">
           <li>
@@ -88,7 +82,7 @@ class Login extends React.Component {
     );
   };
 
-  SignUpForm = () => {
+  signupForm(){
     return (
       <div>
 
@@ -133,7 +127,13 @@ class Login extends React.Component {
     );
   };
 
-  
+  sanju(){
+    return(
+      <div style={{color:'black'}}>
+        "hey bhagwaan rasta dikha de!"
+      </div>
+    );
+  };
 
   render () {
 
@@ -141,7 +141,7 @@ class Login extends React.Component {
       <div>
 
        
-        {/* <Header log={this.LogInForm()} /> */}
+        {/* <Header log={this.sanju()} /> */}
                 <div className="signupSection">
                   <div className="info">
                     <h2 style={{ fontSize: "25px" }}>Mission to Safe Park</h2>
@@ -150,7 +150,8 @@ class Login extends React.Component {
                     <p>The Parking Is Here</p>
                   </div>
                   <form className="signupForm" name="signupform">
-                    {this.LogInForm}
+                    {this.loginForm()}
+                    {this.sanju()}
                   </form>
                 </div>
 

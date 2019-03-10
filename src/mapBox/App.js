@@ -30,14 +30,14 @@ export class MapContainer extends Component {
     }
   };
 
-  bookForm = (props) => {
-    console.log("sanju");
+  bookForm = () => {
+    console.log("deva jara chamtkar daakhav re..!");
     
       
       return (
       <div>
         <Login />
-        <button onClick={props.addTrip}>Add a trip</button>
+        <button>Add a trip</button>
       </div>
     );
   };

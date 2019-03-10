@@ -3,18 +3,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
+import fire from '../LoginStyle/Firebase';
+import Home from '../LoginStyle/Home';
+import ExButton from './Existing';
+
 
 import Login from '../LoginStyle/Login';
 
 class Header extends React.Component {
-    state = { showMenu: false };
+    // state = { showMenu: 'Existing User ?' };
 
-    showMenu = (event) => {
-        event.preventDefault();
 
-        this.setState({
-            showMenu: true,
-        });
+    //     this.setState({
+    //         showMenu: {this.props.name},
+    //     });
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            email: 'Exist ?'
+        };
+
+       // this.setState({ email: (this.props.userin.email) })
+       // console.log(this.props.userin.email);
+
     }
 
     toggleHandle = (test) => {
@@ -22,39 +35,17 @@ class Header extends React.Component {
         $(el).slideToggle();
     }
 
+    logout = () => {
+        fire.auth().signOut();
+    }
+
 
     render() {
-        console.log(this.props);
+    //    console.log(this.props.userHy);
         return (
             <div>
                 <section id="header">
                     <div className="header-area">
-                        {/* <div className="top_header">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 zero_mp">
-                                        <div className="address">
-                                            <i className="fa fa-home floatleft"></i>
-                                            <p>Datta Meghe College Of Engineering, Airoli.</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 zero_mp">
-                                        <div className="phone">
-                                            <i className="fa fa-phone floatleft"></i>
-                                            <p>+91 5454545454</p>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="social_icon text-right">
-                                            <a href=""><i className="fa fa-facebook"></i></a>
-                                            <a href=""><i className="fa fa-twitter"></i></a>
-                                            <a href=""><i className="fa fa-google-plus"></i></a>
-                                            <a href=""><i className="fa fa-youtube"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> */}
                         {/* <!--End of top header--> */}
                         <div className="header_menu text-center navBinkami" style={{ marginTop: '-50px' }} data-spy="affix" data-offset-top="50" id="nav">
                             <nav style={{ backgroundColor: 'white' }} className="navbar navbar-default zero_mp navbar-fixed-top navBaresh ">
@@ -85,13 +76,14 @@ class Header extends React.Component {
                                             <li><a href="#blog">blog</a></li> */}
                                             <li><a href="#contact">contact us</a></li>
                                             {/* <li><Link to="/login">Login</Link></li> */}
+
                                             <li>
                                                 <div className="dropdown">
                                                     <button className="dropbtn button dropdown-toggle">EXISTING USER ?</button>
                                                     <div className="dropdown-content">
                                                         <a href="/login">login</a>
                                                         <a href="/login">SignUp</a>
-                                                        <a href="#">Link 3</a>
+                                                        <a href="#" onClick={this.logout}>Logout</a>
                                                     </div>
                                                 </div>
                                             </li>

@@ -1,3 +1,7 @@
+.emailBox{
+    margin-bottom: 500px;
+}
+
 .height{
     height: '200px',
 }
@@ -22,7 +26,7 @@
     .mapchyakhalchmargin{
         margin-bottom: 280px;
     }
-  }
+}
 
     .navBaresh{
         min-height: 50px;
@@ -43,7 +47,7 @@
         }
     }  
 
-    .dropbtn {
+       .dropbtn {
         background-color: #4CAF50;
         color: white;
         padding: 16px;
@@ -81,4 +85,6 @@
       
       .dropdown:hover .dropbtn {        background-color:#369AD4;
       }
+
+
 

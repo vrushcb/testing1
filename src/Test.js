@@ -3,6 +3,9 @@ import Temp from './Temp';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Header from './NavBar/Header';
 import App from './mapBox/App';
+import Home from './LoginStyle/Home';
+import ExButton from './NavBar/Existing';
+
 
 class Test extends React.Component{
     chu = ( ) => {
