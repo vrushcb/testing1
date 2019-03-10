@@ -7,6 +7,7 @@ import './greenfair/css/font-awesome.min.css';
 import './greenfair/css/responsive.css';
 import './LoginStyle/style.css';
 import React from 'react';
+
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 //import ScriptTag from 'react-script-tag';
@@ -30,6 +31,7 @@ class Temp extends React.Component {
 
                 {/* <!--Start of slider section--> */}
                 <section id="slider">
+
                     <div id="carousel-example-generic" className="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
                         {/* <!-- Indicators --> */}
                         <ol className="carousel-indicators">
@@ -47,7 +49,7 @@ class Temp extends React.Component {
                                         <div className="slider_text">
                                             <h3>Smart Park</h3>
                                             <h2>Search for Parking</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <p>Now you can serach here and get parking place.</p>
                                             {/* <a href={Test.js} className="custom_btn">Read  More</a> */}
                                             
                                             
@@ -69,10 +71,10 @@ class Temp extends React.Component {
                                     <img src="https://images.wallpaperscraft.com/image/bike_street_sidewalk_cars_parking_57304_1920x1080.jpg" alt="..."></img>
                                     <div className="carousel-caption">
                                         <div className="slider_text">
-                                            <h3>Protect</h3>
-                                            <h2>nature the environment</h2>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="" className="custom_btn">Read  More</a>
+                                            <h3>Smart Park</h3>
+                                            <h2>Rent Out Your Parking Places</h2>
+                                            <p>You can give your places on rent for parking.</p>
+                                            <a href="" className="button">On Rent</a>
                                         </div>
                                     </div>
                                 </div>
@@ -83,10 +85,10 @@ class Temp extends React.Component {
                                     <img src="https://hdwallsource.com/img/2014/5/street-parking-wallpaper-45023-46185-hd-wallpapers.jpg" alt="..."></img>
                                     <div className="carousel-caption">
                                         <div className="slider_text">
-                                            <h3>Protect</h3>
+                                            <h3>Smart Park</h3>
                                             <h2>nature the environment</h2>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <a href="" className="custom_btn">Read  More</a>
+                                            <a href="" className="button">Read  More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -430,7 +432,7 @@ class Temp extends React.Component {
                                                         <div className="row">
                                                             <div className="col-md-6">
                                                                 <div className="profile-circle">
-                                                                    <img src="https://scontent.fbom10-1.fna.fbcdn.net/v/t1.0-9/38454887_2079795725568709_84529242762641408_o.jpg?_nc_cat=103&_nc_ht=scontent.fbom10-1.fna&oh=8f7bc5b16cdf10d50ff33176377847d7&oe=5CB2DED2" alt=""></img>
+                                                                    <img src="https://scontent.fbom10-1.fna.fbcdn.net/v/t1.0-9/38454887_2079795725568709_84529242762641408_o.jpg?_nc_cat=103&_nc_ht=scontent.fbom10-1.fna&oh=8f7bc5b16cdf10d50ff33176377847d7&oe=5CB2DED2" alt="Sanjay"></img>
                                                                 </div>
                                                                 <div className="testimonial_content">
                                                                     <i className="fa fa-quote-left"></i>
@@ -443,7 +445,7 @@ class Temp extends React.Component {
                                                             </div>
                                                             <div className="col-md-6">
                                                                 <div className="profile-circle">
-                                                                    <img src="https://scontent.fbom10-1.fna.fbcdn.net/v/t1.0-9/49339611_943675479175900_8481323038111956992_n.jpg?_nc_cat=104&_nc_ht=scontent.fbom10-1.fna&oh=6ecc8d0165f2a88a2b6eaec3ae8d2aea&oe=5CFF4CC6" alt=""></img>
+                                                                    <img src="https://scontent.fbom10-1.fna.fbcdn.net/v/t1.0-9/49339611_943675479175900_8481323038111956992_n.jpg?_nc_cat=104&_nc_ht=scontent.fbom10-1.fna&oh=6ecc8d0165f2a88a2b6eaec3ae8d2aea&oe=5CFF4CC6" alt="Vrushabh"></img>
                                                                 </div>
                                                                 <div className="testimonial_content">
                                                                     <i className="fa fa-quote-left"></i>
@@ -461,7 +463,7 @@ class Temp extends React.Component {
                                                         <div className="row">
                                                             <div className="col-md-6">
                                                                 <div className="profile-circle">
-                                                                    <img src="img/tree_cut_3.jpg" alt=""></img>
+                                                                    <img src="https://scontent.fbom10-1.fna.fbcdn.net/v/t1.0-9/15871784_390781751270703_8610257851502050117_n.jpg?_nc_cat=105&_nc_ht=scontent.fbom10-1.fna&oh=1219b157eae15068a1745c6f44075bef&oe=5CDE0F09" alt="Suraj" zoom="100%"></img>
                                                                 </div>
                                                                 <div className="testimonial_content">
                                                                     <i className="fa fa-quote-left"></i>
@@ -474,7 +476,7 @@ class Temp extends React.Component {
                                                             </div>
                                                             <div className="col-md-6">
                                                                 <div className="profile-circle">
-                                                                    <img src="img/tree_cut_3.jpg" alt=""></img>
+                                                                    <img src="https://scontent.fbom10-1.fna.fbcdn.net/v/t1.0-9/19894971_917577431714953_9012173854566277390_n.jpg?_nc_cat=108&_nc_ht=scontent.fbom10-1.fna&oh=a45113db069b9bea08477a4393002d6c&oe=5CDD9067" alt="Dinesh"></img>
                                                                 </div>
                                                                 <div className="testimonial_content">
                                                                     <i className="fa fa-quote-left"></i>

@@ -1,4 +1,5 @@
 //import './style.css';
+import './W3temp.css';
 import React from 'react';
 //import { Link } from 'react-router-dom';
 import fire from './Firebase';
@@ -35,15 +36,16 @@ class Login extends React.Component {
       }
       )
   }
-  
-  log = () =>{
-   console.log("sanju bhai"); 
+
+  log = () => {
+    console.log("sanju bhai");
   }
 
 
-  LogInForm(){
+  LogInForm() {
     return (
       <div>
+
 
         <h2 style={{ fontSize: "25px" }}>Login</h2>
         <ul className="noBullet">
@@ -131,25 +133,31 @@ class Login extends React.Component {
     );
   };
 
+  
 
-  render() {
+  render () {
 
     return (
       <div>
-        {/* <Header log={this.LogInForm()} /> */}
-        <div className="signupSection">
-          <div className="info">
-            <h2 style={{ fontSize: "25px" }}>Mission to Safe Park</h2>
-            {/* <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i> */}
-            <img src="https://www.iconspng.com/uploads/green-parking/green-parking.png" alt="parking_icon" width="200px" height="200px" />
-            <p>The Parking Is Here</p>
-          </div>
-          <form className="signupForm" name="signupform">
-          {this.LogInForm}
-          </form>
-        </div>
 
-        <script src="js/index.js"></script>
+       
+        {/* <Header log={this.LogInForm()} /> */}
+                <div className="signupSection">
+                  <div className="info">
+                    <h2 style={{ fontSize: "25px" }}>Mission to Safe Park</h2>
+                    {/* <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i> */}
+         <img src="https://www.iconspng.com/uploads/green-parking/green-parking.png" alt="parking_icon" width="200px" height="200px" />
+                    <p>The Parking Is Here</p>
+                  </div>
+                  <form className="signupForm" name="signupform">
+                    {this.LogInForm}
+                  </form>
+                </div>
+
+                <script src="js/index.js"></script>
+
+
+
       </div>
 
     );
